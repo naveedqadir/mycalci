@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+</head>
+<body>
+    <div class="text-center container mt-2">
+        <h1 class="alert alert-primary">Calculator</h1>
+        <input id="num1" class="form-control" placeholder="Enter First Number"><br>
+        <input id="num2" class="form-control" placeholder="Enter Second Number"><br>
+        <button onclick="my_add()" class="btn btn-primary">Add Button</button>
+        <button onclick="my_sub()" class="btn btn-primary">Sub Button</button>
+        <button onclick="my_mult()" class="btn btn-primary">Mult Button</button>
+        <button onclick="my_div()" class="btn btn-primary">Div Button</button>
+
+        <div id="result">
+        </div>
+    </div>
+    <script>
+        //console.log("manav Rachna")
+
+        function my_add(){
+        console.log("Add ");
+        var x = document.getElementById("num1").value
+        var y = document.getElementById("num2").value
+        console.log("x",x);
+        console.log("y",y);
+        var z =  Number(x) + Number(y);
+        console.log("z",z.toFixed(2));
+        document.getElementById("result").innerHTML = '<h2>' + String(z.toFixed(2)) + '</h2>';
+        document.getElementById("result").className = "mt-4 alert alert-success";
+
+        }
+        
+        function my_sub(){
+            console.log("Sub ");
+            var x = document.getElementById("num1").value
+            var y = document.getElementById("num2").value
+            console.log("x",x);
+            console.log("y",y);
+            var z =  Number(x) - Number(y);
+            console.log("z",z.toFixed(2));
+            document.getElementById("result").innerHTML = `<h2>` + String(z.toFixed(2)) + `</h2>`;
+            document.getElementById("result").className = "mt-4 alert alert-success";
+           }
+        function my_mult(){
+            console.log("Multiply");
+            var x = document.getElementById("num1").value
+            var y = document.getElementById("num2").value
+            console.log("x",x);
+            console.log("y",y);
+            var z =  Number(x) * Number(y);
+            console.log("z",z.toFixed(2));
+            document.getElementById("result").innerHTML = `<h2>` + String(z.toFixed(2)) + `</h2>`;
+            document.getElementById("result").className = "mt-4 alert alert-success";
+           }
+        function my_div(){
+            console.log("Divide");
+            var x = document.getElementById("num1").value
+            var y = document.getElementById("num2").value
+            console.log("x",x);
+            console.log("y",y);
+            var z =  Number(x) / Number(y);
+            console.log("z",z.toFixed(2));
+            document.getElementById("result").innerHTML = `<h2>` + String(z.toFixed(2)) + `</h2>`;
+            document.getElementById("result").className = "mt-4 alert alert-success";
+           }
+        
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
